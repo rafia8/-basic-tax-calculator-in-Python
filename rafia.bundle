@@ -1,1 +1,26 @@
 
+def calculateregionTax(price):
+    region_sales_tax = .30
+    return price * region_sales_tax
+
+def calculateUKTax(price):
+    uk_sales_tax =  .25
+    return price * uk_sales_tax
+
+def calculateGermenyTax(price):
+    ger_sales_tax =  .30
+    return price * ger_sales_tax
+
+def displayTotals(price):
+    print('Original price', price)
+    region_tax = calculateregionTax(price)
+    print('Region tax', region_tax)
+    uk_tax = calculateUKTax(price)
+    print('UK tax', uk_tax)
+    ger_tax = calculateGermenyTax(price)
+    print('Germeny tax', ger_tax)
+    print('Total', price + region_tax + uk_tax + ger_tax)
+
+def main():
+    price = float(input('Enter the price of Cigarettes: '))
+    displayTotals(price)
